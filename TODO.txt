@@ -1,0 +1,2 @@
+- alle Produkte in der Datenbank mit Name, Beschreibung und Preis eintragen (Tabelle Produkt)
+- Produkt Bilder einheitlich machen, gleiche Größe. Vorschlag 400x400 Pixels.

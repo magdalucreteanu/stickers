@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Anmelden Antwort</title>
+</head>
+<body>
+        <%if (login == false ){%>
+            <!--Ein Fehler-->
+            Fehler: Anmeldung fehlgeschlagen!<br>
+            <a href="/anmelden">Neuer Versuch</a><br>
+        <%}else{%>
+            <!-- Kein Fehler-->
+            Du bist erfolgreich angemeldet!<br>
+            Email: <%=email%><br>
+        <%}%>
+</body>
+</html>

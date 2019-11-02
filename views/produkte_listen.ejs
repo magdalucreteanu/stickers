@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <% // Iteration über Array zur Ausgabe von Produkten %>
+        <% for (let i = 0; i < produkte.length; i++) { %>
+            <p>Produkt Name: <%= produkte[i].name %></p>
+            <a href="/produkt?id=<%= produkte[i].id %>">
+                <img src="images/<%= produkte[i].bild_datei %>" alt="<%= produkte[i].bild_datei %>" style="width:200px;height:200px;">
+            </a>
+            <p>----------------------------------------------------</p>
+         <% } %>
+
+    </body>
+</html>
