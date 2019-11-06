@@ -42,6 +42,10 @@ app.get('/kontoerstellen', function (req, res){
     res.sendFile(__dirname + '/konto_erstellen.html');
 });
 
+app.get('/index', function (req, res){
+    res.sendFile(__dirname + '/index.html');
+});
+
 app.post("/doerstellen", function(req,res)
 {
     const email =  req.body["email"];
