@@ -42,7 +42,7 @@ app.get('/kontoerstellen', function (req, res){
     res.sendFile(__dirname + '/konto_erstellen.html');
 });
 
-app.get('/index', function (req, res){
+app.get('/', function (req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
