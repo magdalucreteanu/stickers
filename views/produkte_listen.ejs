@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="produktelisten.css">
     </head>
     <body>
+            <div class="topnav">
+                    <a class="active" href="/index">Home</a>
+                    <a href="/produktlist">Produkte</a>
+                    <a href="/anmelden">Anmelden</a>
+                    <a href="/kontoerstellen">Konto erstellen</a>
+                    <br>
+            <form action="/index" method="POST">
+                <input type="text" name="suche">
+                <button type="submit">Suchen</button>
+                </form>
+             </div> 
+
+        <div class="produktelisten">
         <% // Iteration über Array zur Ausgabe von Produkten %>
         <% for (let i = 0; i < produkte.length; i++) { %>
-            <p>Produkt Name: <%= produkte[i].name %></p>
+            <%//erst mal keine Produktnamen ausgeben, hab ich mit css noch nicht schön hinbekommen%>
+            <%//Kümmer mich später darum!%>
+            <%//<p>Produktname: = produkte[i].name </p> %>
             <a href="/produkt?id=<%= produkte[i].id %>">
                 <img src="images/<%= produkte[i].bild_datei %>" alt="<%= produkte[i].bild_datei %>" style="width:200px;height:200px;">
             </a>
-            <p>----------------------------------------------------</p>
          <% } %>
+        </div>
 
     </body>
 </html>
