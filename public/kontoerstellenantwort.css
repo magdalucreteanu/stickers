@@ -1,0 +1,72 @@
+/* ..............NAVIGATION BAR........................
+Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  *{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: rgb(56, 134, 197);
+    color: white;
+  }
+  .topnav form{
+    float: right;
+  }
+
+  .topnav button{
+    background-color: rgb(56, 134, 197); 
+    color: white;
+  }
+
+* {box-sizing:border-box}
+
+/*.....................KONTO ERSTELLEN ANTWORT...................*/
+.kontoerstellenantwort{
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: rgb(56, 134, 197);
+    width: 400px;
+    border: 15px white;
+    padding: 50px white;
+    margin: 20px;
+    color: white;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+  transform: translate(-50%, -45%);
+}
+.kontoerstellenantwort h1{
+    font-size: xx-large;
+}
+.kontoerstellenantwort h2{
+    font-size: medium;
+}
+.kontoerstellenantwort p{
+    font-size: medium;
+    font-weight: bold;
+}
+.kontoerstellenantwort button{
+    background-color: white;
+    margin: 10px;
+}
