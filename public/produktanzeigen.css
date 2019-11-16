@@ -41,3 +41,29 @@ Add a black background color to the top navigation */
 * {box-sizing:border-box}
 
 /*.....................PRODUKT ANZEIGEN...................*/
+
+.produktanzeigen{
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: rgb(56, 134, 197);
+  width: 300px;
+  border: 15px;
+  padding: 50px;
+  margin: 5%;
+  color:white;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(10%, -45%);
+  font-weight: bold;
+}
+img{
+  float:left;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
