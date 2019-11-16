@@ -20,7 +20,9 @@ const session = require('express-session');
 app.use(session({
     secret: 'example',
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: true,
+    user: '',
+    loggedIn: false
 }));
 
 // Ordner wo die Prudukt Bilder liegen
@@ -39,11 +41,11 @@ app.listen(3000, function(){
 });
 
 app.get('/kontoerstellen', function (req, res){
-    res.sendFile(__dirname + '/konto_erstellen.html');
+    res.render('konto_erstellen');
 });
 
 app.get('/', function (req, res){
-    res.sendFile(__dirname + '/index.html');
+    res.render('index');
 });
 
 app.post("/doerstellen", function(req,res)
@@ -94,7 +96,7 @@ app.post("/doerstellen", function(req,res)
 });
 
 app.get('/anmelden', function (req, res){
-    res.sendFile(__dirname + '/anmelden.html');
+    res.render('anmelden')
 });
 
 app.post("/doanmelden", function(req,res)
