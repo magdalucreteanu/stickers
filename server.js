@@ -140,6 +140,10 @@ app.get('/produkt', function (req, res){
     });
 });
 
+app.get('/warenkorb', function (req, res) {
+    res.render('warenkorb', {login: isLoggedIn(req)});
+});
+
 app.get('/rechnung', function (req, res){
     const rechnungsnummer = req.query.nummer
 

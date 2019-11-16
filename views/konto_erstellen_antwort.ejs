@@ -16,6 +16,9 @@
                 <%}else{%>
                     <a class="active" href="/abmelden">Abmelden</a>
                 <%}%>
+                <a href="/warenkorb">
+                    <img src="images/shopping-cart.png" alt="Warenkorb" style="width:20px;height:20px;">
+                </a>
                 <br>
         <form action="/suche" method="POST">
             <input type="text" name="suche">
@@ -23,7 +26,7 @@
             </form>
          </div>
          
-        <dev class="kontoerstellenantwort">
+        <div class="kontoerstellenantwort">
         <%if (login === false ){%>
             <!--Ein Fehler-->
             Fehler: <%=errorMessage%><br>
@@ -33,6 +36,6 @@
             Du bist erfolgreich registriert!<br>
             Email: <%=email%><br>
         <%}%>
-        </dev>
+        </div>
 </body>
 </html>
