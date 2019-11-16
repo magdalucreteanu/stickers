@@ -16,7 +16,7 @@ pwd: mm
 - alle Produkte in der Datenbank mit Name, Beschreibung und Preis eintragen (Tabelle Produkt, mit Code tabellen_erstellen.sql).  
 - Produkt Bilder einheitlich machen, gleiche Größe. Vorschlag 400x400 Pixels.
 - CSS für alle Seiten überprüfen und aktualisieren
-- Produktliste: Produktnamen fehlen
+- Produktlisteseite: Kategorien einfügen
 - Zum Warenkorb hinzufügen: es fehlt die Anzahl von Artikel, derzeit wird immer 1 Stück hinzugefügt
 - Warenkorb: Anzahl bestellten Artikel anzeigen
 - Warenkorb: Produkte aus Warenkorb entfernen
