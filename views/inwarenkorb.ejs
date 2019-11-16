@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Warenkorb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+        <div class="topnav">
+                <a href="/">Home</a>
+                <a class="active" href="/produktlist">Produkte</a>
+                <%if (login === false ){%>
+                    <a href="/anmelden">Anmelden</a>
+                    <a href="/kontoerstellen">Konto erstellen</a>
+                <%}else{%>
+                    <a href="/abmelden">Abmelden</a>
+                <%}%>
+                <a href="/warenkorb">
+                    <img src="images/shopping-cart.png" alt="Warenkorb" style="width:20px;height:20px;">
+                </a>
+                <br>
+        <form action="/suche" method="POST">
+            <input type="text" name="suche">
+            <button type="submit">Suchen</button>
+            </form>
+         </div>
+        
+        <img src="images/<%= produkt.bild_datei %>" alt="<%= produkt.bild_datei %>" style="width:400px;height:400px;">
+
+        <br>
+        <p><%= produkt.name %> wurde zum Warenkorb hinzugefügt.</p>
+        <br>
+        
+        <a href="/produktlist">Weiter einkaufen</a><br>
+        <a href="/warenkorb">Zum Warenkorb</a><br>
+</body>
+</html>

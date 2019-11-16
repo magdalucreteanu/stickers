@@ -26,11 +26,17 @@
              </div> 
 
         <div class="produktanzeigen">
-        <p>Produktname: <%= produkt.name %></p>
-        <p>Beschreibung: <%= produkt.beschreibung %></p>
-        <p>Preis: <%= produkt.preis %> EUR</p>
+            <p>Produktname: <%= produkt.name %></p>
+            <p>Beschreibung: <%= produkt.beschreiung %></p>
+            <p>Preis: <%= produkt.preis %> EUR</p>
+            <form action="/inwarenkorb" method="POST">
+                <input type="hidden" name="produktId" value="<%= produkt.id %>">
+                <button type="submit">Zu Warenkorb hinzufügen</button>
+            </form>
         </div>
         <img src="images/<%= produkt.bild_datei %>" alt="<%= produkt.bild_datei %>" style="width:400px;height:400px;">
         
+        
     </body>
 </html>
+

@@ -89,7 +89,10 @@ app.post("/doerstellen", function(req,res)
 });
 
 app.get('/abmelden', function (req, res) {
+    // Entfernen session Info
     delete req.session['sessionUser'];
+    delete req.session['warenkorb'];
+
     res.render('abmelden');
 });
 
@@ -144,6 +147,20 @@ app.get('/warenkorb', function (req, res) {
     res.render('warenkorb', {login: isLoggedIn(req)});
 });
 
+app.post('/inwarenkorb', function (req, res) {
+    const produktId = req.body["produktId"];
+    addToWarenkorb(req, produktId);
+
+    let sql = `SELECT * FROM produkt WHERE id = ${produktId};`
+    db.all(sql, function(err, rows) {
+        if (rows.length !== 0) {
+            res.render('inwarenkorb', {produkt:rows[0], login: isLoggedIn(req)});
+        } else {
+            res.sendFile(__dirname + '/seite_nicht_gefunden.html');
+        }
+    });
+});
+
 app.get('/rechnung', function (req, res){
     const rechnungsnummer = req.query.nummer
 
@@ -169,4 +186,11 @@ function isLoggedIn(req) {
         login = true;
     }
     return login;
+}
+
+function addToWarenkorb(req, produktId) {
+    if (!req.session['warenkorb']) {
+        req.session['warenkorb'] = [];
+    }
+    req.session['warenkorb'].push(produktId);
 }
