@@ -3,13 +3,7 @@ Angewandte Programmierung Semester II Projekt A
 
 # packages
 npm install  
-npm install express  
-npm install body-parser  
-npm install ejs  
-npm install cookie-parser  
-npm install express-session  
-npm install password-hash  
-npm install sqlite3  
+npm install express body-parser ejs cookie-parser express-session password-hash sqlite3  
 
 # pages
 http://localhost:3000/kontoerstellen  
