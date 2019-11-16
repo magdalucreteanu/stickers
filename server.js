@@ -117,7 +117,6 @@ app.post("/doanmelden", function(req,res)
 app.get('/produktlist', function (req, res){
     let sql = `SELECT * FROM produkt;`
     db.all(sql, function(err, rows) {
-        console.log()
         res.render('produkte_listen', {produkte:rows, login: isLoggedIn(req)});
     });
 });
@@ -126,7 +125,6 @@ app.post('/suche', function (req, res) {
     const begriff = req.body["suche"];
     let sql = `SELECT * FROM produkt WHERE beschreibung LIKE '%${begriff}%';`
     db.all(sql, function(err, rows) {
-        console.log()
         res.render('produkte_listen', {produkte:rows, login: isLoggedIn(req)});
     });
 });
@@ -144,7 +142,18 @@ app.get('/produkt', function (req, res){
 });
 
 app.get('/warenkorb', function (req, res) {
-    res.render('warenkorb', {login: isLoggedIn(req)});
+    if (!req.session['warenkorb'] || req.session['warenkorb'].length === 0) {
+        res.render('warenkorb', {produkte:[], login: isLoggedIn(req)});
+    } else {
+        let sql = `SELECT * FROM produkt WHERE id in (${req.session['warenkorb']});`
+        db.all(sql, function(err, rows) {
+            if (rows.length !== 0) {
+                res.render('warenkorb', {produkte:rows, login: isLoggedIn(req)});
+            } else {
+                res.sendFile(__dirname + '/seite_nicht_gefunden.html');
+            }
+        });
+    }
 });
 
 app.post('/inwarenkorb', function (req, res) {
@@ -159,6 +168,10 @@ app.post('/inwarenkorb', function (req, res) {
             res.sendFile(__dirname + '/seite_nicht_gefunden.html');
         }
     });
+});
+
+app.get('/bestellen', function (req, res) {
+    res.render('bestellen', {login: isLoggedIn(req)});
 });
 
 app.get('/rechnung', function (req, res){

@@ -25,9 +25,27 @@
             <button type="submit">Suchen</button>
             </form>
          </div>
-         
-        <div class="kontoerstellen">
-            Warenkorb!!!
-        </div>
-</body>
+        
+        <%if (produkte.length === 0 ){%>
+            <p>Es befinden sich keine Produkte in deinem Warenkorb.</p>
+        <%}else{%>
+            <p>Die folgenden Produkte befinden sich in Warenkorb:</p>
+            <% for (let i = 0; i < produkte.length; i++) { %>
+                <p><%= produkte[i].name%>: <b><%= produkte[i].preis%> EUR</b></p> 
+                <a href="/produkt?id=<%= produkte[i].id %>">
+                    <img src="images/<%= produkte[i].bild_datei %>" alt="<%= produkte[i].bild_datei %>" style="width:200px;height:200px;">
+            </a>
+            <% } %>
+        <%}%>
+        <br>
+        <a href="/produktlist">Weiter einkaufen</a><br>
+
+        <%if (produkte.length !== 0 ){%>
+            <%if (login === false ){%>
+                <a href="/anmelden">Anmelden um zu bestellen</a>
+            <%}else{%>
+                <a href="/bestellen">Bestellen jetzt!</a>
+            <%}%>
+        <%}%>
+    </body>
 </html>
