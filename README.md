@@ -21,4 +21,4 @@ pwd: mm
 - Warenkorb: Anzahl bestellten Artikel anzeigen
 - Warenkorb: Produkte aus Warenkorb entfernen
 - Rechnung: die Summe der Rechnung berechnen (inkl. Mwst.)
-
+- andere Ideen?
