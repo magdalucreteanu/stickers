@@ -119,6 +119,15 @@ app.get('/produktlist', function (req, res){
     });
 });
 
+app.post('/suche', function (req, res) {
+    const begriff = req.body["suche"];
+    let sql = `SELECT * FROM produkt WHERE beschreibung LIKE '%${begriff}%';`
+    db.all(sql, function(err, rows) {
+        console.log()
+        res.render('produkte_listen', {produkte:rows, login: isLoggedIn(req)});
+    });
+});
+
 app.get('/produkt', function (req, res){
     const produktId = req.query.id
     let sql = `SELECT * FROM produkt WHERE id = ${produktId};`

@@ -15,12 +15,15 @@
                         <a href="/abmelden">Abmelden</a>
                     <%}%>
                     <br>
-            <form action="/" method="POST">
+            <form action="/suche" method="POST">
                 <input type="text" name="suche">
                 <button type="submit">Suchen</button>
                 </form>
              </div> 
 
+        <p>Es wurden <%= produkte.length %> Produkt(e) gefunden.</p>
+        <br>
+        <br>
         <div class="produktelisten">
         <% // Iteration über Array zur Ausgabe von Produkten %>
         <% for (let i = 0; i < produkte.length; i++) { %>
