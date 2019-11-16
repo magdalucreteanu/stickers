@@ -10,8 +10,12 @@
         <div class="topnav">
                 <a class="active" href="/">Home</a>
                 <a href="/produktlist">Produkte</a>
-                <a href="/anmelden">Anmelden</a>
-                <a href="/kontoerstellen">Konto erstellen</a>
+                <%if (login === false ){%>
+                    <a href="/anmelden">Anmelden</a>
+                    <a href="/kontoerstellen">Konto erstellen</a>
+                <%}else{%>
+                    <a href="/abmelden">Abmelden</a>
+                <%}%>
                 <br>
         <form action="/" method="POST">
             <input type="text" name="suche">
@@ -20,7 +24,7 @@
          </div>
          
         <dev class="kontoerstellenantwort">
-        <%if (success == false ){%>
+        <%if (login === false ){%>
             <!--Ein Fehler-->
             Fehler: <%=errorMessage%><br>
             <a href="/kontoerstellen">Neuer Versuch</a><br>

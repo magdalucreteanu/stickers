@@ -11,17 +11,21 @@
         <div class="topnav">
                 <a class="active" href="/">Home</a>
                 <a href="/produktlist">Produkte</a>
-                <a href="/anmelden">Anmelden</a>
-                <a href="/kontoerstellen">Konto erstellen</a>
+                <%if (login === false ){%>
+                    <a href="/anmelden">Anmelden</a>
+                    <a href="/kontoerstellen">Konto erstellen</a>
+                <%}else{%>
+                    <a href="/abmelden">Abmelden</a>
+                <%}%>
                 <br>
         <form action="/" method="POST">
             <input type="text" name="suche">
             <button type="submit">Suchen</button>
             </form>
-         </div> 
+        </div> 
 
-         <div class="anmeldenantwort">
-        <%if (login == false ){%>
+        <div class="anmeldenantwort">
+        <%if (login === false ){%>
             <!--Ein Fehler-->
             Fehler: Anmeldung fehlgeschlagen!<br>
             <a href="/anmelden">Neuer Versuch</a><br>
