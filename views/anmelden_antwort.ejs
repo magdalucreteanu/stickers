@@ -2,9 +2,25 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="anmeldenantwort.css">
     <title>Anmelden Antwort</title>
 </head>
 <body>
+
+        <div class="topnav">
+                <a class="active" href="/index">Home</a>
+                <a href="/produktlist">Produkte</a>
+                <a href="/anmelden">Anmelden</a>
+                <a href="/kontoerstellen">Konto erstellen</a>
+                <br>
+        <form action="/index" method="POST">
+            <input type="text" name="suche">
+            <button type="submit">Suchen</button>
+            </form>
+         </div> 
+
+         <div class="anmeldenantwort">
         <%if (login == false ){%>
             <!--Ein Fehler-->
             Fehler: Anmeldung fehlgeschlagen!<br>
@@ -14,5 +30,6 @@
             Du bist erfolgreich angemeldet!<br>
             Email: <%=email%><br>
         <%}%>
+          </div>
 </body>
 </html>
