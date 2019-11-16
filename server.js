@@ -178,29 +178,26 @@ app.get('/bestellen', function (req, res) {
                 + ` SELECT '${rechnungsnummer}', id, ${req.session['warenkorb'][i]}, 1 FROM kunde WHERE email = '${req.session['sessionUser']}';`
             db.run(sql);
         }
+        
         // Leere Warenkorb nach Bestelung
         req.session['warenkorb'] = [];
-        res.render('bestellen', {login: isLoggedIn(req)});
+
+        // Zeige die Rechnung
+        let sql = `SELECT k.name AS kunden_name, k.adresse, p.name AS produkt_name, p.beschreibung, p.bild_datei, p.preis, b.anzahl ` +
+            `FROM bestellung b, kunde k, produkt p `
+            + `WHERE b.rechnungsnummer = '${rechnungsnummer}' `
+            + `AND b.kunde_id = k.id `
+            + `AND b.produkt_id = p.id; `;
+        db.all(sql, function(err, rows) {
+            if (rows.length !== 0) {
+                res.render('bestellung_anzeigen', {bestellung:rows, rechnungsnummer:rechnungsnummer});
+            } else {
+                res.sendFile(__dirname + '/seite_nicht_gefunden.html');
+            }
+        });
     } else {
         res.sendFile(__dirname + '/seite_nicht_gefunden.html');
     }
-});
-
-app.get('/rechnung', function (req, res){
-    const rechnungsnummer = req.query.nummer
-
-    let sql = `SELECT k.name AS kunden_name, k.adresse, p.name AS produkt_name, p.beschreibung, p.bild_datei, p.preis, b.anzahl ` +
-        `FROM bestellung b, kunde k, produkt p `
-        + `WHERE b.rechnungsnummer = '${rechnungsnummer}' `
-        + `AND b.kunde_id = k.id `
-        + `AND b.produkt_id = p.id; `;
-    db.all(sql, function(err, rows) {
-        if (rows.length !== 0) {
-            res.render('bestellung_anzeigen', {bestellung:rows});
-        } else {
-            res.sendFile(__dirname + '/seite_nicht_gefunden.html');
-        }
-    });
 });
 
 function isLoggedIn(req) {
