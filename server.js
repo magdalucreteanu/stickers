@@ -20,9 +20,7 @@ const session = require('express-session');
 app.use(session({
     secret: 'example',
     resave: false,
-    saveUninitialized: true,
-    user: '',
-    loggedIn: false
+    saveUninitialized: true
 }));
 
 // Ordner wo die Prudukt Bilder liegen
@@ -45,7 +43,7 @@ app.get('/kontoerstellen', function (req, res){
 });
 
 app.get('/', function (req, res){
-    res.render('index');
+    res.render('index', {login: isLoggedIn(req)});
 });
 
 app.post("/doerstellen", function(req,res)
@@ -56,6 +54,7 @@ app.post("/doerstellen", function(req,res)
     const name =  req.body["name"];
     const adresse =  req.body["adresse"];
 
+    let errorMessage = '';
     // konsistenzprüfungen
     // Mit vorhandenen User 
     if (email){
@@ -69,34 +68,33 @@ app.post("/doerstellen", function(req,res)
                         const hash = passwordHash.generate(passwort);
                         let sql = `INSERT INTO kunde (email, passwort, name, adresse) VALUES ("${email}", "${hash}", "${name}", "${adresse}");`
                         db.run(sql);
-                        success = true;
-                        errorMessage = "";
+                        req.session['sessionUser'] = email;      
                     } else {
-                        success = false;
                         errorMessage = "Passwort und Wiederholung sind nicht gleich!";
                     }
                 } else {
-                    success = false;
                     errorMessage = "Passwort nicht eingetragen!";
                 }
             } else {
-                success = false;
                 errorMessage = "Adresse nicht eingetragen!"            }
         } else {
-            success = false;
             errorMessage = "Name nicht eingetragen!";
         }
     } else {
-        success = false;
         errorMessage = "Email nicht eingetragen!";
     }
     
-    res.render('konto_erstellen_antwort', {email:email, errorMessage:errorMessage, success:success})
+    res.render('konto_erstellen_antwort', {email:email, errorMessage:errorMessage, login:isLoggedIn(req)});
 
 });
 
-app.get('/anmelden', function (req, res){
-    res.render('anmelden')
+app.get('/abmelden', function (req, res) {
+    delete req.session['sessionUser'];
+    res.render('abmelden');
+});
+
+app.get('/anmelden', function (req, res) {
+    res.render('anmelden');
 });
 
 app.post("/doanmelden", function(req,res)
@@ -107,10 +105,9 @@ app.post("/doanmelden", function(req,res)
     let sql = `SELECT * FROM kunde WHERE email = '${email}';`
     db.all(sql, function(err, rows) {
         if (rows.length !== 0 && passwordHash.verify(passwort, rows[0].passwort)) {
-            res.render('anmelden_antwort', {email:email, login:true})
-        } else {
-            res.render('anmelden_antwort', {email:email, login:false})
+            req.session['sessionUser'] = email;
         }
+        res.render('anmelden_antwort', {email:email, login:isLoggedIn(req)});
     });
 });
 
@@ -118,7 +115,7 @@ app.get('/produktlist', function (req, res){
     let sql = `SELECT * FROM produkt;`
     db.all(sql, function(err, rows) {
         console.log()
-        res.render('produkte_listen', {produkte:rows});
+        res.render('produkte_listen', {produkte:rows, login: isLoggedIn(req)});
     });
 });
 
@@ -127,7 +124,7 @@ app.get('/produkt', function (req, res){
     let sql = `SELECT * FROM produkt WHERE id = ${produktId};`
     db.all(sql, function(err, rows) {
         if (rows.length !== 0) {
-            res.render('produkt_anzeigen', {produkt:rows[0]});
+            res.render('produkt_anzeigen', {produkt:rows[0], login: isLoggedIn(req)});
         } else {
             res.sendFile(__dirname + '/seite_nicht_gefunden.html');
         }
@@ -150,3 +147,13 @@ app.get('/rechnung', function (req, res){
         }
     });
 });
+
+function isLoggedIn(req) {
+    let login;
+    if (!req.session['sessionUser']) {
+        login = false;
+    } else {
+        login = true;
+    }
+    return login;
+}
