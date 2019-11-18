@@ -17,7 +17,7 @@
                   <a href="/abmelden">Abmelden</a>
                 <%}%>
                 <a href="/warenkorb">
-                  <img src="images/shopping-cart.png" alt="Warenkorb" style="width:20px;height:20px;">
+                  <img src="images/shopping-cart.png" alt="Warenkorb" style="width:15px;height:15px;">
                 </a>
                 <br>
                 <form action="/suche" method="POST">
@@ -27,62 +27,60 @@
                 
               </a>
              </div> 
-
-        <!-- Slide Show-->
-        <div class="slideshow-container">
-        <section>
-            <div class="mySlides">
-                <img src="images/beeker3.png" style="width: 100%">
-                <div class="numbertext">1 / 3</div>
+        
+             <div class= "ueberschrift">
+              <h1> Sei einzigartig! <br>
+                Genau wie Deine Sticker!</h1>
              </div>
-             <div class="mySlides">
-                <img src="images/unicorn-01.png" style="width:100%">
-                <div class="numbertext">2 / 3</div>
-            </div>
-            <div class="mySlides">
-                <img src="images/pferd 6.png" style="width:100%">
-                <div class="numbertext">3 / 3</div>
-             </div>
-        </section>
-
-         <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-
-        <script>
-            var slideIndex = 0;
-            showSlides();
+        <!--Text -->
+            <div class="box">
+        
+          <div class="text1">
+            <h1>Was Dich erwartet</h1> 
+            <ul></ul>
+            <li>Kreatives und einzigartiges Design </li>
+            <li>Viele süße Tiersticker und Sprüche</li>
+              <li>Lange Haltbarkeit durch starken Kleber und kratzfeste Oberflächen</li>
+              <li>Hervorragend geeignet für Notizen,
+                fürs Bullet Journal und für den Laptop.</li> 
+              <li>Perfekt auch als Geschenk für Deine Liebsten</li>
+              <br>
             
-            function showSlides() {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-              }
-              slideIndex++;
-              if (slideIndex > slides.length) {slideIndex = 1}    
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-              setTimeout(showSlides, 5000); // Change image every 5 seconds
-            }
-        </script>
+          </ul>
+            <h1>Unser Versprechen</h1>
+            <ul>
+            <li>Beste Qualität aus eigener Produktion</li>
+            <li>Nachhaltige Herstellung in Deutschland</li>
+            <li>Schnelle und deutschlandweite Lieferung</li>
+              <br>
+          </ul>
 
-              <div class="footer">
-                <h2>Besuchen Sie uns bald wieder!</h2>
-              </div> 
+              </ul>
+              <h1>Lieferung ins EU-Ausland</h1>
+              <ul>
+              <li>NEU: Gegen einen Aufschlag ist nun auch die Lieferung ins EU-Ausland möglich</li>
+              <li>Lieferung innerhalb von 20 Tagen in Dein gewünschtes Land</li>
+                <br>
+            </ul>
+          </div>
+            <div class="mySlides">
+                <img src="images/kürbis katze3.png" style="width:20%">
+                <img src="images/reiten pferd 84939.png" style="width:20%">
+                <img src="images/pferde design 44.png" style="width:20%">
+                <img src="images/girl who loves horses spruch.png" style="width:20%">
+                <img src="images/fische nagelrn.png" style="width:20%">
+                <img src="images/hell bee whiser.png" style="width:20%">
+                <img src="images/QUEEN BEE.png" style="width:20%">
+                <img src="images/116960484_159888568_nothing works without bees Imker Spruch Geschenk.png" style="width:20%">
+                <img src="images/kinde einschuldun.png" style="width:20%">
+                <img src="images/dog lady hunde.png" style="width:20%">
+                <img src="images/dogmom hund ejje.png" style="width:20%">
+                <img src="images/hund spie hallwe.png" style="width:20%">
+                <br>
+                <a href="/produktlist">Alle Produkte</a>
+             </div>
+            </div>
+        </section>
         
     </body>
 </html>
