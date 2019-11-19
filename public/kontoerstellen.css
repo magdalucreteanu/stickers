@@ -7,6 +7,8 @@ Add a black background color to the top navigation */
   
   *{
     font-family: Arial, Helvetica, sans-serif;
+    margin:0%;
+    padding:0%;
   }
   /* Style the links inside the navigation bar */
   .topnav a {
@@ -42,29 +44,30 @@ Add a black background color to the top navigation */
 
 /*.....................KONTOERSTELLEN...................*/
 .kontoerstellen{
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    background-color: rgb(56, 134, 197);
-    width: 400px;
-    border: 15px white;
-    padding: 50px white;
-    margin: 20px;
-    color: white;
-    position: fixed; 
-    top: 50%;
-    left: 50%;
-  transform: translate(-50%, -45%);
+  text-align: center;
+  text-decoration: none;
+  background-color: #a7d3ff;
+  padding:2%;
+  margin-top:5%;
+  margin-left: 40%;
+  margin-right:40%;
+  border-radius: 5px;
 }
 .kontoerstellen h1{
-    font-size: xx-large;
+  font-size: xx-large;
+  margin:2%;
+  margin-bottom: 4%;
 }
 .kontoerstellen h2{
-    font-size: medium;
+  font-size: large;
+  margin: 2%;
+  margin-bottom: 4%;
 }
 .kontoerstellen p{
-    font-size: medium;
-    font-weight: bold;
+  font-size: medium;
+  font-weight: bold;
+  margin: 2%;
+  margin-bottom: 0.5%;;
 }
 .kontoerstellen button{
     background-color: white;
