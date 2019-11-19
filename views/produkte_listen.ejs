@@ -15,7 +15,7 @@
                         <a href="/abmelden">Abmelden</a>
                     <%}%>
                     <a href="/warenkorb">
-                        <img src="images/shopping-cart.png" alt="Warenkorb" style="width:20px;height:20px;">
+                        <img src="images/shopping-cart.png" alt="Warenkorb" style="width:15px;height:15px;">
                     </a>                    <br>
             <form action="/suche" method="POST">
                 <input type="text" name="suche">
@@ -31,10 +31,14 @@
         <% for (let i = 0; i < produkte.length; i++) { %>
             <%//erst mal keine Produktnamen ausgeben, hab ich mit css noch nicht schön hinbekommen%>
             <%//Kümmer mich später darum!%>
-            <%//<p>Produktname: = produkte[i].name </p> %>
+            <div class="img">
+                <figure>
             <a href="/produkt?id=<%= produkte[i].id %>">
                 <img src="images/<%= produkte[i].bild_datei %>" alt="<%= produkte[i].bild_datei %>" style="width:200px;height:200px;">
+                <figcaption><%= produkte[i].name%> </figcaption> 
             </a>
+                </figure>
+            </div>
          <% } %>
         </div>
 
