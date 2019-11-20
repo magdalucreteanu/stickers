@@ -21,7 +21,7 @@ VALUES("Lustiger Imker Spruch", "Lustiger Imker Bienen Sticker. You can't scare 
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
 VALUES("Süßes Einhhorn", "Lustiger Cooler Einhörner Sticker für Freunde oder Familie.", "unicorn-01.png", 3.99);
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
-VALUES("Save the Bees Bienen Geschenkidee", "Lustiger Imker Bienen Sticker als Geschenkidee für Imkerin oder Bienenliebhaber", "116960484_159888568_nothing works without bees Imker Spruch Geschenk.png", 4,99);
+VALUES("Save the Bees Bienen Geschenkidee", "Lustiger Imker Bienen Sticker als Geschenkidee für Imkerin oder Bienenliebhaber", "116960484_159888568_nothing works without bees Imker Spruch Geschenk.png", 4.99);
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
 VALUES("Berge Wandern Bären Sticker", "Cooles Design für Wanderer und Tier/ Bärenliebhaber. ", "bergeebär berge e.png", 3.99);
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
