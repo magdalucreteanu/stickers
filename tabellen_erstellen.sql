@@ -17,17 +17,17 @@ CREATE TABLE bestellung(id iNTEGER PRIMARY KEY AUTOINCREMENT,
     anzahl NUMERIC NOT NULL);
 
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
-VALUES("Lustiger Imker Spruch", "Lustiger Imker Bienen Sticker. You can't scare me. I am a beekeeper als Geschenkidee für Imkerin oder Bienenliebhaber", "beeker3.png", 3,99);
+VALUES("Lustiger Imker Spruch", "Lustiger Imker Bienen Sticker. You can't scare me. I am a beekeeper als Geschenkidee für Imkerin oder Bienenliebhaber", "beeker3.png", 3.99);
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
 VALUES("Süßes Einhhorn", "Lustiger Cooler Einhörner Sticker für Freunde oder Familie.", "unicorn-01.png", 3.99);
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
 VALUES("Save the Bees Bienen Geschenkidee", "Lustiger Imker Bienen Sticker als Geschenkidee für Imkerin oder Bienenliebhaber", "116960484_159888568_nothing works without bees Imker Spruch Geschenk.png", 4,99);
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
-VALUES("Berge Wandern Bären Sticker", "Cooles Design für Wanderer und Tier/ Bärenliebhaber. ", "bergeebär berge e.png", 3,99);
+VALUES("Berge Wandern Bären Sticker", "Cooles Design für Wanderer und Tier/ Bärenliebhaber. ", "bergeebär berge e.png", 3.99);
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
-VALUES("Kaffe Hunde Hund Geschenk", "Für alle die Kaffee und Hunde lieben. Zum Geburtstag oder Weihnachten ", "coffe pet dogd eiwhund 4ik3mo.png", 2,99);
+VALUES("Kaffe Hunde Hund Geschenk", "Für alle die Kaffee und Hunde lieben. Zum Geburtstag oder Weihnachten ", "coffe pet dogd eiwhund 4ik3mo.png", 2.99);
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
-VALUES("Verrückte Hunde Lady Sticker", "An alle Crazy Dog Ladys hier ist der perfekte Sticker. ", "dog lady hunde.png", 4,99);
+VALUES("Verrückte Hunde Lady Sticker", "An alle Crazy Dog Ladys hier ist der perfekte Sticker. ", "dog lady hunde.png", 4.99);
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
 VALUES("Bienen Sticker", "Cooler Bienen Sticker als Geschenkidee", "QUEEN BEE.png", 4.99);
 INSERT INTO produkt(name, beschreibung, bild_datei, preis)
