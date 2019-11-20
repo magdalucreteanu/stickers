@@ -27,7 +27,7 @@
 
         <div class="produktanzeigen">
             <p>Produktname: <%= produkt.name %></p>
-            <p>Beschreibung: <%= produkt.beschreiung %></p>
+            <p>Beschreibung: <%= produkt.beschreibung %></p>
             <p>Preis: <%= produkt.preis %> EUR</p>
             <form action="/inwarenkorb" method="POST">
                 <input type="hidden" name="produktId" value="<%= produkt.id %>">
