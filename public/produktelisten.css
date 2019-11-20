@@ -50,22 +50,44 @@ Add a black background color to the top navigation */
     flex-wrap: wrap;
     flex: 1;
     align-items: space-around;
+    justify-content: center;
 }
 .produktelisten .img{
   margin: 1%;
   background-color: rgb(83, 83, 83);
   border-radius: 5px;
+  height: 250px;
+  width: 200px;
 
 }
 .produktelisten figcaption{
   color: white;
-  
+  text-align: center; 
+  font-weight: bold;
+  font-size: large;
+}
+
+.produktelisten a:link {
+  text-decoration: none;
+}
+
+.produktelisten a:visited {
+  text-decoration: none;
+}
+
+.produktelisten a:hover {
+  text-decoration: underline;
+}
+
+.produktelisten a:active {
+  text-decoration: underline;
 }
 
 p{
   font-size: large;
   margin:0.5%;
-  margin-top:1%;
+  margin-top:1.5%;
+  margin-left: 1.5%;
   margin-bottom: 0%;font-weight: bold;
 
 }
