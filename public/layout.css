@@ -62,7 +62,8 @@ Add a black background color to the top navigation */
 }
 .box{
   display: flex;
-  margin: 1%;
+  margin: 1%; 
+  
 }
 
 .mySlides{
@@ -95,12 +96,12 @@ Add a black background color to the top navigation */
 }
 .text1{
   flex: 1;
-  border: 5px solid #a7d3ff;
-  
+  border: 5px solid #a7d3ff;  
+
 }
 .text1 h1{
  text-align: left;
- font-size: x-large;
+ font-size: 2vw;
  background-color: #a7d3ff;
  padding: 1%;
 }
@@ -109,6 +110,7 @@ Add a black background color to the top navigation */
   text-align: left;
   margin: 1%;
   margin-left: 5%;
-  font-size: 22px;
+
   padding: 0.5%;
+  font-size: 1.4vw;
 }
