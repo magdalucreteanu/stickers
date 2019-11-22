@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-
 <html>
     <head>
-        <title>Bestellung Anzeigen</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="bestellunganzeigen.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="produktanzeigen.css">
     </head>
-
     <body>
+
             <div class="topnav">
                     <a href="/">Home</a>
-                    <a href="/produktlist">Produkte</a>
-                    <a href="/anmelden">Anmelden</a>
-                    <a href="/kontoerstellen">Konto erstellen</a>
-                    <a class="active" href="/warenkorb">
+                    <a class="active" href="/produktlist">Produkte</a>
+                    <%if (login === false ){%>
+                        <a href="/anmelden">Anmelden</a>
+                        <a href="/kontoerstellen">Konto erstellen</a>
+                    <%}else{%>
+                        <a href="/abmelden">Abmelden</a>
+                    <%}%>
+                    <a href="/warenkorb">
                         <img src="images/shopping-cart.png" alt="Warenkorb" style="width:15px;height:15px;">
                     </a>
                     <br>
@@ -23,22 +25,18 @@
                 </form>
              </div> 
 
-             <h1>Rechnung <%= rechnungsnummer %></h1>
-             <p>Ihre Bestellung ist erfolgreich eingegangen.</p>
-             <p>Anbei erhalten Sie die Rechnung:</p>
-             <p>----------------------------------------------------</p>
-             <h3>Name: <%= bestellung[0].kunden_name %></h3>
-             <h3>Adresse: <%= bestellung[0].adresse %></h3>
-             <p>----------------------------------------------------</p>
-             <% for (let i = 0; i < bestellung.length; i++) { %>
-                 <h3>Produkt <%= i+1 %>: <%= bestellung[i].produkt_name %></h3>
-                 <p>Preis: <%= bestellung[i].preis %> EUR</p>
-                 <p>Anzahl: <%= bestellung[i].anzahl %></p>
-                 <img src="images/<%= bestellung[i].bild_datei %>" alt="<%= bestellung[i].bild_datei %>" style="width:100px;height:100px;">
-                 <p></p>
-              <% } %>
-             <br>
-
-             <a href="/produktlist">Weiter einkaufen</a><br>
+        <div class="produktanzeigen">
+            <p>Produktname: <%= produkt.name %></p>
+            <p>Beschreibung: <%= produkt.beschreibung %></p>
+            <p>Preis: <%= produkt.preis %> EUR</p>
+            <form action="/inwarenkorb" method="POST">
+                <input type="hidden" name="produktId" value="<%= produkt.id %>">
+                <button type="submit">Zum Warenkorb hinzufügen</button>
+            </form>
+        </div>
+        <div class = "img">
+        <img src="images/<%= produkt.bild_datei %>" alt="<%= produkt.bild_datei %>" style="width:400px;height:400px;">
+    </div>
+        
     </body>
 </html>
