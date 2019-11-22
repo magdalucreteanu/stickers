@@ -51,7 +51,7 @@ Add a black background color to the top navigation */
 /*..........MY SLIDES............*/
 .ueberschrift{
   text-align: center;
-  font-size: 30px;
+  font-size: 3vw;
   background-color:  rgb(56, 134, 197); 
   margin: 1%;
   padding: 3%;
@@ -71,6 +71,7 @@ Add a black background color to the top navigation */
   display: flex;
   margin: 1%; 
   
+  
 }
 
 .mySlides{
@@ -80,12 +81,14 @@ Add a black background color to the top navigation */
   flex: 2;
   align-items: space-around;
   margin-left: 1%;
+  justify-content: center;
   
 }
 .mySlides img{
   margin: 1%;
   background-color: rgb(83, 83, 83, 0.9);
   border-radius: 5px;
+ 
 }
 .mySlides .link{
   float: center;
@@ -97,6 +100,7 @@ Add a black background color to the top navigation */
   margin-top:1%;
   margin-left:40%;
   margin-right: 40%;
+  
 }
 .mySlides .link a:link {
   text-decoration: none;
@@ -122,6 +126,7 @@ Add a black background color to the top navigation */
 .text1 .untertext{
   /*border-radius: 5px;*/
   margin: 1%;
+  margin-bottom: 2%;
   background-color: #a7d3ff81;
   border: 5px solid  rgb(56, 134, 197, 0.5);
   border-radius: 5px;
@@ -143,3 +148,56 @@ Add a black background color to the top navigation */
   padding: 0.5%;
   font-size: 1.4vw;
 }
+
+.kundenbewertungueberschrift{
+  float: center;
+  font-size: 1.5vw;
+  text-align: center;
+  margin:2%;
+  margin-top:3%;
+  padding: 2%;
+  border: 1%;
+  color: rgb(37, 37, 37);
+  border-radius: 5px;
+
+  background:
+  linear-gradient(135deg, #a7d3ff 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+  linear-gradient(225deg, #a7d3ff 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+  background-color:#a7d3ff;
+  background-size: 64px 128px;
+}
+
+.kundenbewertung{
+  display: flex;
+  margin: 1%;
+}
+
+.bewertung{
+  flex-direction: row;
+  background-color:white;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: space-around;
+  margin-left: 1%;
+  background-color:rgb(216, 216, 216);
+  padding: 1%;
+  border-radius: 5px;
+}
+
+.bewertung h2{
+  font-size: 2vw;
+}
+.bewertung h5{
+  margin-top:0.5%;
+  font-size: 1vw;
+}
+.bewertung p{
+  font-size: 1.5vw;
+}
+
+span{
+  font-size:150%;
+  color:rgb(230, 205, 95);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
