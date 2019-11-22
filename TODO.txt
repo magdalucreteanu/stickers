@@ -1,6 +1,8 @@
 - alle Produkte in der Datenbank mit Name, Beschreibung und Preis eintragen (Tabelle Produkt)
 - Produkt Bilder einheitlich machen, gleiche Größe. Vorschlag 400x400 Pixels.
 
--seite nicht gefunden designen
+-Seite nicht gefunden designen (nicht so wichtig)
 -warenkorb designen
--bestellen designen
+-bestellunganzeigen designen
+-anmelden, anmelden antwort, abmelden, konto erstellen, konto erstellen antwort, produkt anzeigen dürfen bearbeitet werden
+-navigationsleiste (topnav), home und produkte listen bitte nicht bearbeiten
