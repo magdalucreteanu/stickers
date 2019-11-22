@@ -1,4 +1,4 @@
-/* ..............NAVIGATION BAR........................
+/* ..............NAVIGATION BAR......................
 Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
@@ -38,9 +38,16 @@ Add a black background color to the top navigation */
   .topnav button{
     background-color: rgb(56, 134, 197); 
     color: white;
+    border-radius: 5px;
+  }
+
+  .topnav form{
+    margin-right:2%;
+
   }
 
 * {box-sizing:border-box}
+
 
 /*.....................ANMELDEN ANTWORT...................*/
 .anmeldenantwort{
