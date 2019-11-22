@@ -54,7 +54,7 @@ Add a black background color to the top navigation */
 }
 .produktelisten .img{
   margin: 1%;
-  background-color: rgb(83, 83, 83);
+  background-color: rgb(83, 83, 83, 0.9);
   border-radius: 5px;
   height: 250px;
   width: 200px;
@@ -92,5 +92,3 @@ p{
   font-weight: bold;
 
 }
-
-
