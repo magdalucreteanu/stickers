@@ -27,9 +27,10 @@
          </div>
         
         <%if (produkte.length === 0 ){%>
-            <p>Es befinden sich keine Produkte in deinem Warenkorb.</p>
+            <p>Oh oh! Dein Warenkorb ist noch leer    
+            </p>
         <%}else{%>
-            <p>Die folgenden Produkte befinden sich in Warenkorb:</p>
+            <p>Die folgenden Produkte befinden sich im Warenkorb:</p>
             <% for (let i = 0; i < produkte.length; i++) { %>
                 <p><%= produkte[i].name%>: <b><%= produkte[i].preis%> EUR</b></p> 
                 <a href="/produkt?id=<%= produkte[i].id %>">
