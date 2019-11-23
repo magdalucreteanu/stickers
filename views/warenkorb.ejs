@@ -40,13 +40,14 @@
         <%}%>
         <br>
         
-        <button href="/produktlist">Weiter einkaufen</button><br>
+        <a href="/produktlist" class="button" >Weiter einkaufen<a/>
 
         <%if (produkte.length !== 0 ){%>
             <%if (login === false ){%>
-                <button href="/anmelden">Anmelden um zu bestellen</button>
+                <a href="/anmelden" class="button">Anmelden um zu bestellen<a/>
             <%}else{%>
-                <button href="/bestellen">Bestellen jetzt!</button>
+               <a href="/bestellen" class="button">Bestellen jetzt!
+            <a/> 
             <%}%>
         <%}%>
     </body>
