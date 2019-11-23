@@ -47,6 +47,30 @@ Add a black background color to the top navigation */
   }
   
   * {box-sizing:border-box}
+
+ html {
+    text-align: center;
+    background-color:rgb(170, 219, 228); 
+    margin: auto;  
+  }
+
+  p {
+    margin-top: 50px;
+    color:black;
+    box-sizing: border-box;
+    font-size:2.8em;
+    border-style: solid;
+    border-radius:5px;
+    border-width:5px;
+  }
+  button{
+    padding:10px;
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+    font-size:20px;
+  }
+
   
   
   /*.....................WARENKORB...................*/
