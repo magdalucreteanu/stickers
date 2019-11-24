@@ -48,4 +48,50 @@ Add a black background color to the top navigation */
   
   * {box-sizing:border-box}
   
+   /* center font */
+  html {
+    text-align: center;
+    background-color:white; 
+    margin: auto;  
+  }
+
+ /* all black color*/
+  p {
+    margin-top: 50px;
+    color:black;
+    
+    font-size:2.8em;
+ 
+  }
+ /* not finished link button
+  .button{
+    padding:10px 80px;
+    color:black;
+    background-color: white;
+    border-radius: 10px;
+    font-size:20px;
+    border: solide 3px
+    
+  }*/
+
+   /* produktname mit preis*/
+  #one {
+    color:black;
+    font-size: 18px;
+    margin-top: 20px;
+
+  }
+
+ /* anmelden um zu bestellen link */
+  #two {
+    font-size: 19px;
+    margine-top: 50px;
+  }
+
+ /* weiter einkaufen link*/
+  #three {
+    font-size:18px ;
+    
+  }
+
   
