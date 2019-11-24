@@ -50,3 +50,7 @@ Add a black background color to the top navigation */
   
   
   /*.....................BESTELLUNG ANZEIGEN...................*/
+
+html {
+    text-align: center;
+}
