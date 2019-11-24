@@ -32,7 +32,7 @@
         <%}else{%>
             <p>Die folgenden Produkte befinden sich im Warenkorb:</p>
             <% for (let i = 0; i < produkte.length; i++) { %>
-                <p><%= produkte[i].name%>: <b><%= produkte[i].preis%> EUR</b></p> 
+                <p id="one"> <%= produkte[i].name%>: <b><%= produkte[i].preis%> EUR</b></p> 
                 <a href="/produkt?id=<%= produkte[i].id %>">
                     <img src="images/<%= produkte[i].bild_datei %>" alt="<%= produkte[i].bild_datei %>" style="width:200px;height:200px;">
             </a>
@@ -40,11 +40,10 @@
         <%}%>
         <br>
         
-        <a href="/produktlist" class="button" >Weiter einkaufen<a/>
-
+        <a type="button" id="three" href="/produktlist" class="button" >Weiter einkaufen<a/> <br> <br>
         <%if (produkte.length !== 0 ){%>
             <%if (login === false ){%>
-                <a href="/anmelden" class="button">Anmelden um zu bestellen<a/>
+                <a id="two" href="/anmelden" class="button"> <b>Anmelden um zu bestellen<a/>
             <%}else{%>
                <a href="/bestellen" class="button">Bestellen jetzt!
             <a/> 
