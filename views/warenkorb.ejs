@@ -30,7 +30,7 @@
             <p>Oh oh! dein Warenkorb ist leer.</p>
             <img src="nope cat.png" style="width:400px;height:400px;"">
         <%}else{%>
-            <p>Die folgenden Produkte befinden sich in Warenkorb:</p>
+            <p>Die folgenden Produkte befinden sich im Warenkorb:</p>
             <% for (let i = 0; i < produkte.length; i++) { %>
                 <p><%= produkte[i].name%>: <b><%= produkte[i].preis%> EUR</b></p> 
                 <a href="/produkt?id=<%= produkte[i].id %>">
