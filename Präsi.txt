@@ -1,1 +1,8 @@
-
+Wir erstellen einen Testuser.
+Wir schauen uns die Home-Seite und scrollen runter bis zu den guten Bewertungen.
+Wir gehen auf alle Produkte und packen irgendeinen Srticker in den Warenkorb.
+Danach wollen wir noch mehr Sticker kaufen und gehen auf weiter einkaufen.
+Wir suchen nach Pferde-Stickern und packen einen in den Warenkorb.
+Danach gehen wir auf zum Warenkorb.
+Zum Bestellen müssen wir uns anmelden. Da wir noch kein Kundenkonto haben erstellen wir eins.
+Nun können wir die Produkte aus dem Warenkorb bestellen und erhalten die Rechnung angezeigt.
