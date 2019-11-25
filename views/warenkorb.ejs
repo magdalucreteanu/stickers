@@ -26,9 +26,10 @@
             </form>
          </div>
         
+        <div class="warenkorb">
         <%if (produkte.length === 0 ){%>
-            <p>Oh oh! dein Warenkorb ist leer.</p>
-            <img src="nope cat.png" style="width:400px;height:400px;"">
+            <p>Oh oh! Dein Warenkorb ist leer.</p>
+            <img src="images/nope cat.png" style="width:400px;height:400px;"">
         <%}else{%>
             <p>Die folgenden Produkte befinden sich im Warenkorb:</p>
             <% for (let i = 0; i < produkte.length; i++) { %>
@@ -38,16 +39,19 @@
             </a>
             <% } %>
         <%}%>
+        </div>
         <br>
         
+        <div class="button">
         <a type="button" id="three" href="/produktlist" class="button" >Weiter einkaufen<a/> <br> <br>
         <%if (produkte.length !== 0 ){%>
             <%if (login === false ){%>
                 <a id="two" href="/anmelden" class="button"> <b>Anmelden um zu bestellen<a/>
             <%}else{%>
-               <a href="/bestellen" class="button">Bestellen jetzt!
-            <a/> 
+               <a href="/bestellen" class="button">Jetzt bestellen!
+               <a/> 
             <%}%>
         <%}%>
+    </div>
     </body>
 </html>
