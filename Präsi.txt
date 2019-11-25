@@ -6,3 +6,4 @@ Wir suchen nach Pferde-Stickern und packen einen in den Warenkorb.
 Danach gehen wir auf zum Warenkorb.
 Zum Bestellen müssen wir uns anmelden. Da wir noch kein Kundenkonto haben erstellen wir eins.
 Nun können wir die Produkte aus dem Warenkorb bestellen und erhalten die Rechnung angezeigt.
+Danach melden wir uns ab.
