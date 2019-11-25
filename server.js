@@ -91,7 +91,6 @@ app.post("/doerstellen", function(req,res)
 app.get('/abmelden', function (req, res) {
     // Entfernen session Info
     delete req.session['sessionUser'];
-    delete req.session['warenkorb'];
 
     res.render('abmelden');
 });
