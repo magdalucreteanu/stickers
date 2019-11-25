@@ -48,7 +48,8 @@ Add a black background color to the top navigation */
   
   * {box-sizing:border-box}
   
-   /* center font */
+   /* ...............WARENKORB........................
+   center font */
   html {
     text-align: center;
     background-color:white; 
@@ -57,41 +58,43 @@ Add a black background color to the top navigation */
 
  /* all black color*/
   p {
-    margin-top: 50px;
+    margin:1%;
+    margin-top: 3%;
     color:black;
     
-    font-size:2.8em;
+    font-size:3vw;
  
   }
- /* not finished link button
-  .button{
-    padding:10px 80px;
-    color:black;
-    background-color: white;
-    border-radius: 10px;
-    font-size:20px;
-    border: solide 3px
-    
-  }*/
 
+  /*image*/
+  .warenkorb img{
+
+    background-color: #a7d3ff;
+    border-radius: 5px;
+    margin-bottom:2%;
+  }
    /* produktname mit preis*/
   #one {
     color:black;
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: 1.5vw;
+    margin-top: 1%;
+  
 
   }
 
- /* anmelden um zu bestellen link */
-  #two {
-    font-size: 19px;
-    margine-top: 50px;
-  }
-
- /* weiter einkaufen link*/
-  #three {
-    font-size:18px ;
-    
+ /* anmelden um zu bestellen link und weiter einkaufen link*/
+  .button {
+    font-size:1.3vw ;
+    margin:1% white;
+   float: center;
+   text-align: center;
+   margin-left: 25%;
+   margin-right:25%;
+    padding: 1%;
+    color:white;
+    background-color: rgb(83, 83, 83);
+    border-radius: 5px;
+    font-weight: bold;
   }
 
   
