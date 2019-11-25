@@ -6,3 +6,8 @@
 -bestellunganzeigen designen
 -anmelden, anmelden antwort, abmelden, konto erstellen, konto erstellen antwort, produkt anzeigen dürfen bearbeitet werden
 -navigationsleiste (topnav), home und produkte listen bitte nicht bearbeiten
+
+
+BUGFIXING:
+-Unicorn ist noch doppelt!!! - eins muss entfernt werden
+-Warenkorb wird beim ein- und ausloggen nicht gespeichert
