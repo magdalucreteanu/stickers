@@ -10,4 +10,4 @@
 
 BUGFIXING:
 -Unicorn ist noch doppelt!!! - eins muss entfernt werden
--Warenkorb wird beim ein- und ausloggen nicht gespeichert
+(-Warenkorb wird beim ein- und ausloggen nicht gespeichert)
