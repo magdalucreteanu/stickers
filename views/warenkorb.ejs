@@ -28,10 +28,10 @@
         
         <div class="warenkorb">
         <%if (produkte.length === 0 ){%>
-            <p>Oh oh! Dein Warenkorb ist leer.</p>
-            <img src="images/nope cat.png" style="width:400px;height:400px;"">
+            <h1>Oh oh! Dein Warenkorb ist leer.</h1>
+            <img src="images/nope cat.png" style="width:300px;height:300px;">
         <%}else{%>
-            <p>Die folgenden Produkte befinden sich im Warenkorb:</p>
+            <h1>Die folgenden Produkte befinden sich im Warenkorb:</h1>
             <% for (let i = 0; i < produkte.length; i++) { %>
                 <p id="one"> <%= produkte[i].name%>: <b><%= produkte[i].preis%> EUR</b></p> 
                 <a href="/produkt?id=<%= produkte[i].id %>">
@@ -39,7 +39,7 @@
             </a>
             <% } %>
         <%}%>
-        </div>
+        
         <br>
         
         <div class="button">
@@ -53,5 +53,6 @@
             <%}%>
         <%}%>
     </div>
+</div>
     </body>
 </html>
