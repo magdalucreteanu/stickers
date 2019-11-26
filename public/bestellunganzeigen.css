@@ -54,3 +54,36 @@ Add a black background color to the top navigation */
 html {
     text-align: center;
 }
+
+.rechnung{
+  background-color: #a7d3ff;
+  margin:2%;
+  padding: 1%;
+  border-radius: 5px;
+  margin-left:20%;
+  margin-right: 20%;
+}
+
+.rechnung h1{
+  font-size: 2vw;
+  margin-bottom: 2%;
+}
+
+.rechnung h2{
+  font-size: 2vw;
+  font-weight: normal;
+}
+
+.rechnung h3{
+  font-size: 2vw;
+  font-weight: normal;
+}
+
+.rechnungprodukt{
+  background-color: rgb(83, 83, 83, 0.5);
+  padding: 1%;
+  margin:2%;
+  border-radius: 5px;
+  margin-left:20%;
+  margin-right:20%;
+}
