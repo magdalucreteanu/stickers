@@ -57,14 +57,22 @@ Add a black background color to the top navigation */
   }
 
  /* all black color*/
+  .warenkorb h1 {
+    color:black;
+    padding:2%;
+    font-size:3vw;
+    margin-bottom: 2%;
+    background:
+  linear-gradient(135deg, #a7d3ff 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+  linear-gradient(225deg, #a7d3ff 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+  background-color:#a7d3ff;
+  background-size: 64px 128px;
+  }
+
   p {
     margin:1%;
     margin-top: 3%;
-    color:black;
-    
-    font-size:3vw;
- 
-  }
+    color:black;}
 
   /*image*/
   .warenkorb img{
@@ -83,18 +91,20 @@ Add a black background color to the top navigation */
   }
 
  /* anmelden um zu bestellen link und weiter einkaufen link*/
-  .button {
+  .warenkorb .button {
+    
     font-size:1.3vw ;
     margin:1% white;
-   float: center;
    text-align: center;
-   margin-left: 25%;
-   margin-right:25%;
     padding: 1%;
     color:white;
     background-color: rgb(83, 83, 83);
     border-radius: 5px;
     font-weight: bold;
+    height: 10%;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 2%;
   }
 
   
