@@ -22,13 +22,14 @@
                 </form>
              </div> 
 
+             <div class="rechnung">
              <h1>Rechnung <%= rechnungsnummer %></h1>
-             <p>Ihre Bestellung ist erfolgreich eingegangen.</p>
-             <p>Anbei erhalten Sie die Rechnung:</p>
-             <p>----------------------------------------------------</p>
+             <h2>Ihre Bestellung ist erfolgreich eingegangen.</h2>
+             <h2>Anbei erhalten Sie die Rechnung:</h2><br>
+           
              <h3>Name: <%= bestellung[0].kunden_name %></h3>
-             <h3>Adresse: <%= bestellung[0].adresse %></h3>
-             <p>----------------------------------------------------</p>
+             <h3>Adresse: <%= bestellung[0].adresse %></h3><br>
+                <div class="rechnungprodukt">
              <% for (let i = 0; i < bestellung.length; i++) { %>
                  <h3>Produkt <%= i+1 %>: <%= bestellung[i].produkt_name %></h3>
                  <p>Preis: <%= bestellung[i].preis %> EUR</p>
@@ -36,8 +37,10 @@
                  <img src="images/<%= bestellung[i].bild_datei %>" alt="<%= bestellung[i].bild_datei %>" style="width:100px;height:100px;">
                  <p></p>
               <% } %>
-             <br>
+            </div>
+            
 
              <a href="/produktlist">Weiter einkaufen</a><br>
+            </div>
     </body>
 </html>
