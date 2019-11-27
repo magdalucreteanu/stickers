@@ -55,13 +55,14 @@ Add a black background color to the top navigation */
   text-decoration: none;
   background-color: #a7d3ff;
   padding:2%;
-  margin-top:5%;
-  margin-left: 40%;
-  margin-right:40%;
+  margin:2%;
+  margin-top:3%;
+  margin-left: 39%;
+  margin-right:39%;
   border-radius: 5px;
 }
 .kontoerstellen h1{
-  font-size: xx-large;
+  font-size: x-large;
   margin:2%;
   margin-bottom: 4%;
 }
@@ -73,8 +74,8 @@ Add a black background color to the top navigation */
 .kontoerstellen p{
   font-size: medium;
   font-weight: bold;
-  margin: 2%;
-  margin-bottom: 0.5%;;
+  margin-bottom: 0.8%;
+  
 }
 .kontoerstellen button{
     background-color: white;
@@ -86,6 +87,6 @@ Add a black background color to the top navigation */
 }
 .kontoerstellen input{
     float: center;
-    margin-bottom: 10px;
+    
     margin-top: 2px;;
 }
