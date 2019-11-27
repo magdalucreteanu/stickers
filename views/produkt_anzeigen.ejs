@@ -25,6 +25,10 @@
                 </form>
              </div> 
 
+             <div class="produkt">
+                    <div class = "img">
+                            <img src="images/<%= produkt.bild_datei %>" alt="<%= produkt.bild_datei %>" style="width:400px;height:400px;">
+                        </div>
         <div class="produktanzeigen">
             <p>Produktname: <%= produkt.name %></p>
             <p>Beschreibung: <%= produkt.beschreibung %></p>
@@ -34,9 +38,8 @@
                 <button type="submit">Zum Warenkorb hinzufügen</button>
             </form>
         </div>
-        <div class = "img">
-        <img src="images/<%= produkt.bild_datei %>" alt="<%= produkt.bild_datei %>" style="width:400px;height:400px;">
-    </div>
+        
+</div>
         
     </body>
 </html>
